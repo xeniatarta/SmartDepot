@@ -1,0 +1,238 @@
+.page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: auto;
+}
+
+.auth-header {
+    background-color: #333;
+    color: white;
+    padding: 12px 3px;
+    text-align: center;
+}
+
+.auth-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1.5rem 0;
+    color: #ff9966; /* Portocaliu */
+    font-weight: 700;
+}
+
+.auth-header span { color: #fda085; }
+
+.auth-tabs {
+    display: flex;
+    background: #f0f0f0;
+}
+
+.auth-tabs button {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    color: #777;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.auth-tabs button.active {
+    border-bottom-color: #fda085;
+    color: #333;
+    background: #fff;
+}
+
+.form-panel { padding: 25px 30px 30px 30px; }
+
+form { display: flex; flex-direction: column; gap: 14px; }
+
+label { font-weight: 500; color: #333; font-size: 14px; }
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #f8f8f8;
+}
+
+input:focus { border-color: #fda085; outline: none; background: #fff; }
+
+.submit-btn {
+    margin-top: 10px;
+    padding: 15px;
+    width: 100%;
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%); /* PORTOCALIU GRADIENT */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(253, 160, 133, 0.4);
+}
+
+/* ===== MESAJE AUTH - Design elegant și transparent ===== */
+.auth-message-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.auth-message-area {
+    margin: 1px auto;
+    padding: 16px 24px;
+    width: 400px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    animation: authSlideIn 0.3s ease;
+}
+
+@keyframes authSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-message-text {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: center;
+}
+
+.auth-message-area.auth-success {
+    background: rgba(232, 255, 232, 0.95);
+    border: 2px solid rgba(76, 175, 80, 0.4);
+    color: #2e7d32;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.15);
+}
+
+.auth-message-area.auth-error {
+    background: rgba(255, 107, 107, 0.15);
+    border: 2px solid rgba(255, 107, 107, 0.3);
+    color: #c62828;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.2);
+}
+
+/* Link resetare parolă din mesajul de eroare */
+.auth-reset-password-link {
+    margin-top: 4px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(198, 40, 40, 0.2);
+    width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    color: #d32f2f;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.auth-reset-password-link:hover {
+    color: #b71c1c;
+    transform: translateY(-1px);
+}
+
+/* SUBTAB-URI EMAIL / TELEFON – aliniate cu tab-urile de sus */
+.login-subtabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;                /* mic spațiu între butoane (oval) */
+    margin: 10px 0 20px 0;
+}
+
+/* Butoane ovale */
+.login-subtabs button {
+    padding: 6px 20px;
+    background: #ffe7df;       /* portocaliu foarte deschis */
+    border: 2px solid #f79d82; /* contur portocaliu */
+    color: #cc6e55;            /* text portocaliu */
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.25s ease;
+    border-radius: 25px;       /* OVALE */
+}
+
+/* Buton activ */
+.login-subtabs button.active {
+    background: #f79d82;       /* portocaliu */
+    color: white;
+    border-color: #f79d82;
+    font-weight: 600;
+}
+
+/* Hover */
+.login-subtabs button:not(.active):hover {
+    background: #ffd3c5;
+    border-color: #f79d82;
+}
+
+/* ===== BUTON TOGGLE PASSWORD (OCHIȘOR) ===== */
+.password-toggle-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    opacity: 0.6;
+    transition: all 0.2s ease;
+}
+
+.password-toggle-btn:hover {
+    opacity: 1;
+    color: #666;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.password-toggle-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.password-toggle-btn svg {
+    display: block;
+}
