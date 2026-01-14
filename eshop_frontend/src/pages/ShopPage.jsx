@@ -46,7 +46,7 @@ export default function ShopPage({ onLogout }) {
                 setLoading(true);
                 const token = localStorage.getItem('authToken');
 
-                const res = await fetch('http://localhost:3002/api/products', {
+                const res = await fetch('https://smartdepot.onrender.com/api/products', {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
 
