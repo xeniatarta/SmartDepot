@@ -147,10 +147,10 @@ export default function ProductDetailsPage() {
             <div className="product-container">
                 <div className="product-image-section">
                     <img
-                        src={product.imageUrl || 'https://via.placeholder.com/500x500?text=Fara+imagine'}
+                        src={product.imageUrl || 'https://placehold.co/500x500?text=Fara+imagine'}
                         alt={product.title}
                         onError={(e) => {
-                            e.target.src = 'https://via.placeholder.com/500x500?text=Fara+imagine';
+                            e.target.src = 'https://placehold.co/500x500?text=Fara+imagine';
                         }}
                     />
                 </div>

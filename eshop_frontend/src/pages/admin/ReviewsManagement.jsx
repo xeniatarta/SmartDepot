@@ -134,7 +134,7 @@ export default function ReviewsManagement() {
                                     }}
                                 >
                                     <img
-                                        src={product.imageUrl || 'https://via.placeholder.com/100'}
+                                        src={product.imageUrl || 'https://placehold.co/100'}
                                         alt={product.title}
                                         style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px' }}
                                     />
