@@ -21,7 +21,7 @@ app.post(
 //     origin: process.env.FRONTEND_URL || '*', // Fallback pe '*' dacă uiți variabila, dar nu e recomandat prod
 //     credentials: true
 // }));
-const cors = require('cors');
+// const cors = require('cors');
 app.use(cors({
     origin: 'https://smart-depot.vercel.app' // URL-ul tău de Vercel (fără / la final)
 }));
